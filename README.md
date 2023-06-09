@@ -91,13 +91,13 @@ body: \
     "username": "", \
     "email": "", \
     "password": "" \
-} \
+} 
 
 
 If success and http status code is 200 which means user is created successfully , it will send you response like this object: \
 { \
     "key": "cb0389fa588a479ca30191d6d7403e4b15fa84f4" \
-} \
+} 
 
 When an error occur then error is 400 and will send you a object of errors. \
 { \
