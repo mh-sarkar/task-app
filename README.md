@@ -45,6 +45,7 @@ If success and http status code is 201 which means user is created successfully 
 { \
     "key": "cb0389fa588a479ca30191d6d7403e4b15fa84f4" \
 } 
+
 This key is the token to Authorize the use. \
 One can get and update his user details information , and verify himself as authenticate with the token,
 
