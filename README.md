@@ -17,9 +17,9 @@ proxy=http://18.136.192.25
 port=8000
 # Auth Api
 ## Registration
-url=http://proxy:port/registration/
-Http Method : POST
-Content-Type: application/json
+url=http://proxy:port/registration/ \
+Http Method : POST \
+Content-Type: application/json \
 body:
 {
     "username": "",
