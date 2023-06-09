@@ -127,7 +127,7 @@ HTTP Method : GET \
 headers: \
 { \
     "Authorization":"Token cb0389fa588a479ca30191d6d7403e4b15fa84f4" \
-} \
+} 
 
 response: \
 [ \
