@@ -25,7 +25,7 @@ body: \
     "username": "", \
     "email": "", \
     "password1": "", \
-    "password2": "" \
+    "password2": "" 
 } 
 
 Username should be unique. If not it will send you and error and response to you. You should check the response and show to the users.Password 1 and Password 2 must be same.
@@ -44,7 +44,7 @@ You should show the this error to the user.
 If success and http status code is 201 which means user is created successfully , it will send you response like this object: \
 { \
     "key": "cb0389fa588a479ca30191d6d7403e4b15fa84f4" \
-} \
+} 
 This key is the token to Authorize the use. \
 One can get and update his user details information , and verify himself as authenticate with the token,
 
