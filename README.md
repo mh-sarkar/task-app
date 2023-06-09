@@ -8,7 +8,7 @@ This app should have authentication system. \
 Task 01: User Registration, User Login, User Details. \
 Task 02: User can send & receive message using chatbox. (Web Socket) \
 NB: (Chat between users and server).In this page user can send message to server and get a message back immediately. You should show that message too.  \
-Task 03: State Management \
+Task 03: State Management
 
 NB: Be carefull about design, code readability and commenting.
 
