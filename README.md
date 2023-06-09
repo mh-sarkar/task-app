@@ -1,7 +1,7 @@
 # Introduction
 This is a backend endpoint to test candidates who want to join to our company Silicornya Ltd. \
 This backend include websocket and autthentication system. \
-To test new flutter developers if they can integrates this apis and build the app. \
+To test new flutter developers if they can integrates this apis and build the app.
 
 # Task Details
 This app should have authentication system. \
@@ -10,11 +10,11 @@ Task 02: User can send & receive message using chatbox. (Web Socket) \
 NB: (Chat between users and server).In this page user can send message to server and get a message back immediately. You should show that message too.  \
 Task 03: State Management \
 
-NB: Be carefull about design, code readability and commenting. \
+NB: Be carefull about design, code readability and commenting.
 
 ##
 proxy=http://18.136.192.25 \
-port=8000 \
+port=8000 
 # Auth Api
 ## Registration
 url=http://proxy:port/registration/ \
@@ -46,7 +46,7 @@ If success and http status code is 201 which means user is created successfully 
     "key": "cb0389fa588a479ca30191d6d7403e4b15fa84f4" \
 } \
 This key is the token to Authorize the use. \
-One can get and update his user details information , and verify himself as authenticate with the token, \
+One can get and update his user details information , and verify himself as authenticate with the token,
 
 ## User Details API
 url=http://proxy:port/auth/user/ \
@@ -79,7 +79,7 @@ For both GET and PATCH it response this object: \
     "email": "sasaj5@gmail.com", \
     "first_name": "Sal",  \
     "last_name": "Ahm" \
-} \
+} 
 
 ## Login API:
 
@@ -107,7 +107,7 @@ When an error occur then error is 400 and will send you a object of errors. \
         "Must include \"username\" and \"password\".", \
          "Unable to log in with provided credentials." \
     ], \
-} \
+} 
 
 # Websocket API
 
@@ -118,7 +118,7 @@ where <room> is a unique room Number to listen to this socket channel. You shoul
 <email> is the user's email \
 
 If user send a message to the socket channel and he/she will get back a message from the server. \
-You sould show the server message to the user. \
+You sould show the server message to the user. 
 
 
 # API for previous chat Messages
@@ -140,4 +140,4 @@ response: \
         "serverMessage": "sasaj5, you have sent this message: Hello Server!. Thanks for contact us. We will message you soon to your email: sasaj5@gmail.com", \
         "created_at": "2023-06-09T17:18:18.553680Z" \
     } \
-] \
+] 
