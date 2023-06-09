@@ -25,7 +25,7 @@ body: \
     "username": "", \
     "email": "", \
     "password1": "", \
-    "password2": "" 
+    "password2": "" \
 } 
 
 Username should be unique. If not it will send you and error and response to you. You should check the response and show to the users.Password 1 and Password 2 must be same.
