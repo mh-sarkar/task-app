@@ -26,9 +26,9 @@ body: \
     "email": "", \
     "password1": "", \
     "password2": "" \
-} \
+} 
 
-Username should be unique. If not it will send you and error and response to you. You should check the response and show to the users.Password 1 and Password 2 must be same. \
+Username should be unique. If not it will send you and error and response to you. You should check the response and show to the users.Password 1 and Password 2 must be same.
 
 When username is not unique then error is 400 and will send you a object of errors. \
 { \
@@ -39,7 +39,7 @@ When username is not unique then error is 400 and will send you a object of erro
         "A user is already registered with this e-mail address." \
     ] \
 } \
-You should show the this error to the user. \
+You should show the this error to the user. 
 
 If success and http status code is 201 which means user is created successfully , it will send you response like this object: \
 { \
@@ -56,7 +56,7 @@ Headers: \
 { \
     "Authorization":"Token cb0389fa588a479ca30191d6d7403e4b15fa84f4" \
 } \
-Without the correct token you will not be authenticated. \
+Without the correct token you will not be authenticated.
 
 When PATCH \
 body: \
@@ -115,7 +115,7 @@ Websocket endpoint is: \
 'ws://proxy:port/connection/<room>/<name>/<email>/' \
 where <room> is a unique room Number to listen to this socket channel. You should generate your room number and listen to the number to get back your message. \
 <name> is the user's username \
-<email> is the user's email \
+<email> is the user's email 
 
 If user send a message to the socket channel and he/she will get back a message from the server. \
 You sould show the server message to the user. 
