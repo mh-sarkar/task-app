@@ -1,4 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:mh_core/services/api_service.dart';
+import 'package:task/src/shared/controller/auth_services.dart';
+import 'package:task/src/shared/shared_widgets/dialog.dart';
 
 import '../../utils/global/global.dart';
 
@@ -30,9 +35,33 @@ class AuthController extends GetxController {
     }
     super.onInit();
   }
-
+  afterLogin(String accessToken) {
+    Global.storage.write('authToken', accessToken);
+    ServiceAPI.setAuthToken(accessToken);
+    Global.storage.write('isLoggedIn', true);
+    // Get.put<UserController>(UserController(), permanent: true);
+    // Get.put<HomeController>(HomeController(), permanent: true);
+    // Get.offAllNamed(MainHomePage.routeName);
+  }
   void offIntroPage() {
     Global.storage.write('isFirstTime', false);
+  }
+
+  void registerRequest(String name, String email, String password, String confirmPassword) async {
+    getProgressDialog();
+    final accessToken = await AuthServices.registerCall({
+      "username": name,
+      "email": email,
+      "password1": password,
+      "password2": confirmPassword,
+    });
+    if (accessToken.isNotEmpty) {
+      Fluttertoast.showToast(
+        msg: 'Your Account created successfully!',
+        textColor: Colors.green,
+      );
+      afterLogin(accessToken);
+    }
   }
 
 }

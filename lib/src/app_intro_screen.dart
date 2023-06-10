@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_donate_app/src/modules/dashboard/views/dashboard.dart';
-import 'package:food_donate_app/src/shared/shared_widgets/custom_sized_boxes.dart';
-import 'package:food_donate_app/src/utils/constants/color_constants.dart';
+import 'package:task/src/modules/dashboard/views/dashboard.dart';
+import 'package:task/src/shared/shared_widgets/custom_sized_boxes.dart';
+import 'package:task/src/utils/constants/color_constants.dart';
 import 'package:get/get.dart';
 
 import 'shared/controller/auth_controller.dart';

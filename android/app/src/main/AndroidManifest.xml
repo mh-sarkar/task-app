@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bb.food_donate_app">
+    package="com.silicornya.task">
    <application
         android:label="Food Donate App"
         android:name="${applicationName}"

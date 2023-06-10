@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:mh_core/services/api_service.dart';
+import 'package:mh_core/utils/global.dart';
+import 'package:task/src/utils/global/global.dart';
 
 import 'src/shared/binding/auth_binding.dart';
 import 'src/utils/constants/route_name_constants.dart';
@@ -21,6 +24,13 @@ Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
+  snackbarKey = globalKey;
+  ServiceAPI.domain(
+    "http://18.136.192.25:8000/");
+  ServiceAPI.extraSlag("");
+  // ServiceAPI.setNavigatorKey(GlobalKey<NavigatorState>());
+navigatorKey = appNavigatorKey;
+  globalLogger.d(ServiceAPI.apiUrl, "URL");
   runApp(const MyApp());
 }
 
@@ -39,6 +49,7 @@ class MyApp extends StatelessWidget {
       locale: Locale(l1, l2),
       fallbackLocale: Locale(l1, l2),
       theme: AppTheme().light,
+      navigatorKey: navigatorKey!,
       initialRoute: AppRouteName.kPageSplash,
       initialBinding: AuthBinding(),
       getPages: AppRoutes.routes(),

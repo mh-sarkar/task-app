@@ -44,6 +44,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/csslib-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -86,6 +92,18 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///home/mh-sarkar/snap/flutter/common/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/fluttertoast-8.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "get",
       "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/get-4.6.5",
       "packageUri": "lib/",
@@ -96,6 +114,12 @@
       "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/get_storage-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.16"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/html-0.15.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "http",
@@ -152,6 +176,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mh_core",
+      "rootUri": "../../mh-core",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "path",
       "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
@@ -192,6 +222,12 @@
       "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "perfect_volume_control",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/perfect_volume_control-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "platform",
@@ -272,6 +308,36 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "video_player",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/video_player-2.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "video_player_android",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/video_player_android-2.4.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "video_player_avfoundation",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/video_player_avfoundation-2.4.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "video_player_platform_interface",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/video_player_platform_interface-6.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "video_player_web",
+      "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/video_player_web-2.0.16",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///home/mh-sarkar/.pub-cache/hosted/pub.dev/win32-4.1.4",
       "packageUri": "lib/",
@@ -284,13 +350,13 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "food_donate_app",
+      "name": "task",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-06-10T05:14:23.382580Z",
+  "generated": "2023-06-10T19:58:02.990632Z",
   "generator": "pub",
   "generatorVersion": "3.0.0"
 }

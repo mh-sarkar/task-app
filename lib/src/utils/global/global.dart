@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:logger/logger.dart';
 
+final globalKey = GlobalKey<ScaffoldMessengerState>();
+final GlobalKey<NavigatorState> appNavigatorKey = GlobalKey<NavigatorState>();
 class Global {
   static final storage = GetStorage();
-  static final logger = Logger();
-
   static setLocalData(String key, dynamic value) {
     storage.write(key, value);
   }

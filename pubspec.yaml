@@ -1,4 +1,4 @@
-name: food_donate_app
+name: task
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -42,13 +42,17 @@ dependencies:
   #LOCAL STORAGE PACKAGE
   get_storage: ^2.1.1
   #HTTP REST API CALL PACKAGE
-  http: ^0.13.4
-  #DATETIME FORMATION PACKAGE
   intl: ^0.18.0
   #DEBUG PRINT FOR DEVELOPMENT PURPOSE
-  logger: ^1.1.0
-  #UNIQUE ID GENERATE PACKAGE
   uuid: ^3.0.6
+  #SHOW MEG TO USER
+  fluttertoast: ^8.0.9
+  #CUSTOM PACKAGE
+  mh_core:
+#    git:
+#      url: https://github.com/mh-sarkar/mh-core.git
+#      ref: alpha
+    path: ../mh-core
   ###END CORE PACKAGE
 
 dev_dependencies:
@@ -90,6 +94,37 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-Bold.ttf
+        - asset: fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Poppins-Light.ttf
+          weight: 300
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
+        - asset: fonts/Raleway-Bold.ttf
+        - asset: fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: fonts/Raleway-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Raleway-Light.ttf
+          weight: 300
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter-Regular.ttf
+        - asset: fonts/Inter-Bold.ttf
+        - asset: fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Inter-Light.ttf
+          weight: 300
   # fonts:
   #   - family: Schyler
   #     fonts:
