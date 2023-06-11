@@ -6,6 +6,7 @@ class AppTheme {
   final light = ThemeData(
     primaryColor: AppColors.kPrimaryColor,
     primarySwatch: AppColors.kPrimarySwatch,
+    appBarTheme: AppBarTheme(backgroundColor: AppColors.kPrimaryColor, centerTitle: true,),
     fontFamily: 'Poppins',
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColors.kPrimaryColor,

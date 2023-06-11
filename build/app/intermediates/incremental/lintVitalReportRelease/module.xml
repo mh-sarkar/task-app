@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    gradle="7.2.0"
+    buildFolder="/home/mh-sarkar/Desktop/Development/Flutter/silicornya/build/app"
+    bootClassPath="/home/mh-sarkar/Android/Sdk/platforms/android-33/android.jar:/home/mh-sarkar/Android/Sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

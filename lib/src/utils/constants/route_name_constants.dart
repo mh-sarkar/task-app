@@ -5,4 +5,6 @@ class AppRouteName {
   ///Auth module
   static const kPageLogin = '/login';
   static const kPageRegistration = '/registration';
+  static const kPageEditProfile = '/edit-profile';
+  static const kPageMessage = '/message';
 }

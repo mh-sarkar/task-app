@@ -1,0 +1,4 @@
+#Mon Jun 12 02:20:27 BDT 2023
+base.0=/home/mh-sarkar/Desktop/Development/Flutter/silicornya/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

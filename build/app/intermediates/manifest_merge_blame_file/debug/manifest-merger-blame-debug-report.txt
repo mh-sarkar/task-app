@@ -13,12 +13,14 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/debug/AndroidManifest.xml:7:22-64
+15-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/main/AndroidManifest.xml:5:5-66
+15-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/main/AndroidManifest.xml:5:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->[com.google.android.exoplayer:exoplayer-core:2.18.7] /home/mh-sarkar/.gradle/caches/transforms-3/ef2321c8ef384bd7d821c1ecf44a36ab/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:24:5-79
-16-->[com.google.android.exoplayer:exoplayer-core:2.18.7] /home/mh-sarkar/.gradle/caches/transforms-3/ef2321c8ef384bd7d821c1ecf44a36ab/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:24:22-76
-17
+16-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/main/AndroidManifest.xml:6:5-79
+16-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/main/AndroidManifest.xml:6:22-76
+17    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- End Network Permission -->
+17-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/main/AndroidManifest.xml:7:5-68
+17-->/home/mh-sarkar/Desktop/Development/Flutter/silicornya/android/app/src/main/AndroidManifest.xml:7:22-65
 18    <application
 19        android:name="android.app.Application"
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"

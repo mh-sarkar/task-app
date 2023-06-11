@@ -28,6 +28,9 @@ Future<void> main() async {
   ServiceAPI.domain(
     "http://18.136.192.25:8000/");
   ServiceAPI.extraSlag("");
+  ServiceAPI.setAuthTokenPrefix("Token");
+  ServiceAPI.setAuthToken(Global.storage.read('authToken')??'');
+  ServiceAPI.setCookie(Global.storage.read('cookie')??'');
   // ServiceAPI.setNavigatorKey(GlobalKey<NavigatorState>());
 navigatorKey = appNavigatorKey;
   globalLogger.d(ServiceAPI.apiUrl, "URL");

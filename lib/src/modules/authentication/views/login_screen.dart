@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:mh_core/utils/color/custom_color.dart';
 import 'package:task/src/modules/authentication/views/registration_screen.dart';
@@ -8,7 +7,6 @@ import 'package:mh_core/utils/global.dart';
 import 'package:mh_core/widgets/button/custom_button.dart';
 import 'package:mh_core/widgets/textfield/custom_textfield.dart';
 import 'package:task/src/utils/constants/color_constants.dart';
-
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/login';
@@ -51,7 +49,10 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             SizedBox(height: Get.height * .12),
-            const Icon(Icons.telegram_outlined, size: 150,),
+            const Icon(
+              Icons.telegram_outlined,
+              size: 150,
+            ),
             SizedBox(height: Get.height * .06),
             const Center(
               child: Text(
@@ -72,8 +73,8 @@ class _LoginScreenState extends State<LoginScreen> {
               errorMessage: errorUserName,
               onChanged: (val) {
                 if (val.isEmpty) {
-                  errorUserName = 'Entered a valid username!';
-                } else  {
+                  errorUserName = 'Enter a valid username!';
+                } else {
                   errorUserName = null;
                 }
                 previousPos = val.length - 1;
@@ -88,11 +89,11 @@ class _LoginScreenState extends State<LoginScreen> {
               errorMessage: errorEmail,
               onChanged: (val) {
                 if (val.isEmpty) {
-                  errorEmail = 'Entered a valid email or phone number!';
+                  errorEmail = 'Enter a valid email or phone number!';
                 } else if (val.isEmail || val.isPhoneNumber) {
                   errorEmail = null;
                 } else {
-                  errorEmail = 'Your Entered Email or phone number is Not Valid!';
+                  errorEmail = 'Your Enter Email or phone number is Not Valid!';
                 }
                 previousPos = val.length - 1;
                 setState(() {});
@@ -109,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (val) {
                 debugPrint(val);
                 if (val.isEmpty) {
-                  errorPassword = 'Entered a Password!';
+                  errorPassword = 'Enter a Password!';
                 } else if (val.length < 6) {
                   errorPassword = 'Enter 6 character Password!';
                 } else {
@@ -123,18 +124,31 @@ class _LoginScreenState extends State<LoginScreen> {
               label: 'Login'.tr,
               isDisable: false,
               onPressed: () {
-                if (emailController.text.isEmpty) {
-                  errorEmail = 'Entered a valid email or phone number!';
+                if (userNameController.text.isEmpty) {
+                  errorUserName = 'Enter your username!';
                   if (passwordController.text.isEmpty) {
-                    errorPassword = 'Entered a Password!';
+                    errorPassword = 'Enter a Password!';
+                  }
+                  if (emailController.text.isEmpty) {
+                    errorEmail = 'Enter a valid email address!';
+                  }
+                  setState(() {});
+                } else if (emailController.text.isEmpty) {
+                  errorEmail = 'Enter a valid email address!';
+                  if (passwordController.text.isEmpty) {
+                    errorPassword = 'Enter a Password!';
                   }
                   setState(() {});
                 } else if (passwordController.text.isEmpty) {
-                  errorPassword = 'Entered a Password!';
+                  errorPassword = 'Enter a Password!';
                   setState(() {});
                 } else if (errorEmail == null && errorPassword == null) {
                   globalLogger.d(emailController.text, passwordController.text);
-                  // AuthController.to.loginRequest(emailController.text, passwordController.text, rememberCheck);
+                  AuthController.to.loginRequest(
+                    userNameController.text,
+                    emailController.text,
+                    passwordController.text,
+                  );
                 }
               },
             ),
@@ -144,7 +158,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   Get.toNamed(RegisterScreen.routeName);
                 },
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,

@@ -53,6 +53,9 @@ dependencies:
 #      url: https://github.com/mh-sarkar/mh-core.git
 #      ref: alpha
     path: ../mh-core
+
+  #USE FOR SOCKET
+  web_socket_channel: ^2.4.0
   ###END CORE PACKAGE
 
 dev_dependencies:

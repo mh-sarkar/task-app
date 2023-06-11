@@ -1,5 +1,7 @@
 import 'package:task/src/modules/authentication/views/login_screen.dart';
 import 'package:task/src/modules/authentication/views/registration_screen.dart';
+import 'package:task/src/modules/chat/views/main_chat_screen.dart';
+import 'package:task/src/modules/user/views/edit_profile.dart';
 import 'package:task/src/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -23,6 +25,14 @@ class AppRoutes {
     GetPage(
       name: AppRouteName.kPageRegistration,
       page: () => const RegisterScreen(),
+    ),
+    GetPage(
+      name: AppRouteName.kPageEditProfile,
+      page: () => const EditProfileScreen(),
+    ),
+    GetPage(
+      name: AppRouteName.kPageMessage,
+      page: () => const MessageScreen(),
     ),
     // GetPage(
     //   name: AppRouteName.kPageSaleWindow,

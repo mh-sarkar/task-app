@@ -10,18 +10,26 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 2), () {
-      Get.toNamed(AuthController.to.isLoggedIn? AppRouteName.kPageDashboard: AppRouteName.kPageLogin);
-    },);
-    return Scaffold(
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        Get.offAllNamed(AuthController.to.isLoggedIn
+            ? AppRouteName.kPageDashboard
+            : AppRouteName.kPageLogin);
+      },
+    );
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 30),            const Icon(Icons.telegram_outlined, size: 200,),
-
+            SizedBox(height: 30),
+            Icon(
+              Icons.telegram_outlined,
+              size: 200,
+            ),
             CustomSizedBox.space16H,
-            const Text(
+            Text(
               'Test APP',
               style: TextStyle(
                 fontSize: 36,

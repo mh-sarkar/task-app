@@ -15,6 +15,7 @@ class AuthServices {
       noNeedAuthToken: true,
       allInfoField: body,
       defaultErrorMsgShow: false,
+      isLoadingEnable: true,
     );
     globalLogger.d('${ServiceAPI.apiUrl}registration/', "Register Url");
     globalLogger.d(response, "Register Route");
@@ -23,13 +24,20 @@ class AuthServices {
     if (response['key'] != null) {
       return response['key'];
     } else {
-      showAlert(response['username'] != null && response['username'].isNotEmpty
-          ? response['username'].map((e)=>e).toList.toString().replaceAll('[', '').replaceAll(']', '')
-          : "" + "\n" + response['email'] != null && response['email'].isNotEmpty
-              ? response['email'].map((e)=>e).toList.toString().replaceAll('[', '').replaceAll(']', '')
-              : ""+ "\n" + response['password1'] != null &&
-                  response['password1'].isNotEmpty
-              ? response['password1'].map((e)=>e).toList.toString().replaceAll('[', '').replaceAll(']', '')
+      ServiceAPI.showAlert((response as Map).containsKey('password1')
+          ? response['password1']
+              .map((e) => e)
+              .toList()
+              .toString()
+              .replaceAll('[', '')
+              .replaceAll(']', '')
+          : response.containsKey('non_field_errors')
+              ? response['non_field_errors']
+                  .map((e) => e)
+                  .toList()
+                  .toString()
+                  .replaceAll('[', '')
+                  .replaceAll(']', '')
               : "");
     }
     return '';
@@ -38,10 +46,14 @@ class AuthServices {
   ///LogIn
   static Future<String> loginCall(dynamic body) async {
     final response = await ServiceAPI.genericCall(
-        url: '${ServiceAPI.url}login',
-        httpMethod: HttpMethod.post,
-        noNeedAuthToken: true,
-        body: body);
+      url: '${ServiceAPI.apiUrl}auth/login/',
+      httpMethod: HttpMethod.post,
+      noNeedAuthToken: true,
+      body: body,
+      defaultErrorMsgShow: false,
+      isLoadingEnable: true,
+    );
+    globalLogger.d('${ServiceAPI.apiUrl}auth/login/', "URL");
     globalLogger.d(response, "Login Route");
 
     Get.back();
@@ -49,12 +61,22 @@ class AuthServices {
     if (response['key'] != null) {
       return response['key'];
     } else {
-      showAlert(response['password'] != null && response['password'].isNotEmpty
-          ? response['password'][0]
-          : "" + "\n" + response['non_field_errors'] != null &&
-          response['non_field_errors'].isNotEmpty
-          ? response['non_field_errors'].map((e)=>e).toList.toString().replaceAll('[', '').replaceAll(']', '')
-          : "");
+
+          ServiceAPI.showAlert((response as Map).containsKey('password1')
+              ? response['password']
+              .map((e) => e)
+              .toList()
+              .toString()
+              .replaceAll('[', '')
+              .replaceAll(']', '')
+              : response.containsKey('non_field_errors')
+              ? response['non_field_errors']
+              .map((e) => e)
+              .toList()
+              .toString()
+              .replaceAll('[', '')
+              .replaceAll(']', '')
+              : "");
     }
     return '';
   }
@@ -77,33 +99,8 @@ class AuthServices {
       return true;
     } else if (response['status'] != null && !(response['status'] == 'ok')) {
       Get.back();
-      showAlert(response['message']);
+      ServiceAPI.showAlert(response['message']);
     }
     return false;
-  }
-
-  ///Alert Dialog
-  static void showAlert(String message, {Widget? errorHandleButton}) {
-    if (Get.isDialogOpen!) {
-      Get.back(closeOverlays: true);
-    } else {
-      Get.defaultDialog(
-        title: "Error",
-        content: Text(
-          message,
-          textAlign: TextAlign.center,
-        ),
-        actions: [
-          CustomButton(
-            label: "OK",
-            marginVertical: 8,
-            onPressed: () {
-              Get.back();
-            },
-          ),
-          if (errorHandleButton != null) errorHandleButton,
-        ],
-      );
-    }
   }
 }
